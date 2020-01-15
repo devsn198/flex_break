@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':easyaccordion'
 rootProject.name='flex_break'

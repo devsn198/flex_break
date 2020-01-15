@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyaccordion/easyaccordion.iml" filepath="$PROJECT_DIR$/easyaccordion/easyaccordion.iml" />
       <module fileurl="file://$PROJECT_DIR$/flex_break.iml" filepath="$PROJECT_DIR$/flex_break.iml" />
     </modules>
   </component>
