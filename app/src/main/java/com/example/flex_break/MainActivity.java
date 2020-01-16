@@ -4,11 +4,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.riyagayasen.easyaccordion.AccordionView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
@@ -17,6 +13,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -45,16 +43,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onNotify(View v) {
-        testTimer(5);
+        Reminder reminder = new Reminder(5);
+        reminder.start();
+
     }
 
     public void timerNotify() {
-        //Log.d("log", "Button works");
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID);
-        builder.setSmallIcon(R.drawable.ic_flex_stretch_notification_icon);
-        builder.setContentTitle("Flex Stretch");
-        builder.setContentText("It's time to stretch!");
-        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_flex_stretch_notification_icon)
+            .setContentTitle("Flex Stretch")
+            .setContentText("It's time to stretch!")
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.notify(NOTIFICATION_ID, builder.build());
@@ -78,16 +77,34 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void testTimer(int time) {
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-                timerNotify();
-            }
-        };
+    private class Reminder {
 
-        timer = new Timer();
-        timer.schedule(timerTask, time * 1000);
+        private View UI;
+        private Timer timer;
+        private boolean enabled;
+        private int ringTime;
+        //private int remainingTime;
+        //private String displayText;
+
+        public Reminder(int time) {
+            timer = new Timer();
+            enabled = true;
+            ringTime = time;
+            start();
+        }
+
+        private void start() {
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    timerNotify();
+                }
+            }, ringTime * 1000);
+        }
+
+        private void stop() {
+            timer.cancel();
+        }
     }
 
 
