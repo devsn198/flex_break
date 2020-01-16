@@ -27,11 +27,11 @@ public class HomeFragment extends Fragment {
         final TextView textView = root.findViewById(R.id.text_home);
 
         /* create and display one reminder */
-        Reminder test = new Reminder(this.getContext(), 7);
         LinearLayout reminderLayout = (LinearLayout) root.findViewById(R.id.reminders);
-        //reminderLayout.addView(new Button(this.getApplicationContext()));
-        reminderLayout.addView(test);
-        reminderLayout.addView(new Reminder(this.getContext(), 10));
+
+
+        reminderLayout.addView(new Reminder(this.getContext(), 2));
+        reminderLayout.addView(new Reminder(this.getContext(), 5));
 
 
 

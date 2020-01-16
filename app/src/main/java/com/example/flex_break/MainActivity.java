@@ -28,7 +28,7 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String CHANNEL_ID = "test Channel";
+    private final String CHANNEL_ID = "14";
     private final int NOTIFICATION_ID = 001;
     private Timer timer;
 
@@ -50,23 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onNotify(View v) {
-
-    }
-
-    public void timerNotify() {
-        //Log.d("log", "Button works");
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID);
-        builder.setSmallIcon(R.drawable.ic_flex_stretch_notification_icon);
-        builder.setContentTitle("Flex Stretch");
-        builder.setContentText("It's time to stretch!");
-        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        notificationManager.notify(NOTIFICATION_ID, builder.build());
-    }
-
-    private void createNotificationChannel() {
+    public void createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -83,18 +67,4 @@ public class MainActivity extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
-/*
-    private void testTimer(int time) {
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-                timerNotify();
-            }
-        };
-
-        timer = new Timer();
-        timer.schedule(timerTask, time * 1000);
-    }
- */
-
 }
