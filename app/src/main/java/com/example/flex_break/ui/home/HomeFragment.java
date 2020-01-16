@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -24,7 +25,17 @@ public class HomeFragment extends Fragment {
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
-//        homeViewModel.getText().observe(this, new Observer<String>() {
+
+        /* create and display one reminder */
+        Reminder test = new Reminder(this.getContext(), 7);
+        LinearLayout reminderLayout = (LinearLayout) root.findViewById(R.id.reminders);
+        //reminderLayout.addView(new Button(this.getApplicationContext()));
+        reminderLayout.addView(test);
+        reminderLayout.addView(new Reminder(this.getContext(), 10));
+
+
+
+        //        homeViewModel.getText().observe(this, new Observer<String>() {
 //            @Override
 //            public void onChanged(String s) {
 //                textView.setText(s);

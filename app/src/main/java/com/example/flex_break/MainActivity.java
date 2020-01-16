@@ -48,13 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
         createNotificationChannel();
 
-        //setContentView(R.layout.fragment_home);
-        //create and display one reminder
-        Reminder test = new Reminder(this.getApplicationContext(), 7);
-        //LinearLayout reminderLayout = (LinearLayout) findViewById(R.id.reminders);
-        //reminderLayout.addView(new Button(this.getApplicationContext()));
-        //reminderLayout.addView(test);
-
     }
 
     public void onNotify(View v) {
@@ -103,28 +96,5 @@ public class MainActivity extends AppCompatActivity {
         timer.schedule(timerTask, time * 1000);
     }
  */
-
-    private class Reminder extends TextView {
-
-        private Timer timer;
-        private TimerTask timerTask;
-
-        public Reminder(Context context, int time) {
-            super(context);
-            timerTask = new TimerTask() {
-                @Override
-                public void run() {
-                    Log.d("Timer", "create notification ");
-                }
-            };
-            setHeight(150);
-            setWidth(150);
-            setBackgroundColor(Color.rgb(45,240, 10));
-            setTextSize(15);
-            setText("it works!");
-            timer = new Timer();
-            timer.schedule(timerTask, time * 1000);
-        }
-    }
 
 }
