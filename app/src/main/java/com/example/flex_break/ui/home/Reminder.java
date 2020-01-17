@@ -28,7 +28,12 @@ public class Reminder extends Button {
         this.time = time * 1000;
         started = false;
         this.context = context;
-        this.setText("Press ME");
+        if((getTime() / 1000) >= 60) {
+            setText(getTime() / 60000 + " minute timer");
+        } else {
+            setText(getTime() / 1000 + " seconds timer");
+        }
+        //this.setText(time + " second timer");
 
 
         timer = new Timer();
@@ -40,10 +45,14 @@ public class Reminder extends Button {
                         @Override
                         public void run() {
                             Log.d("Timer", "create notification for");
-                            timerNotify();
+                            timerNotify(getTime());
                         }
                     };
-                    setText("Timer has started");
+                    if((getTime() / 1000) >= 60) {
+                        setText("counting down for " + getTime() / 60000 + " minutes");
+                    } else {
+                        setText("counting down for " + getTime() / 1000 + " seconds");
+                    }
                     timer.schedule(timerTask, getTime());
                     started = true;
                 }
@@ -51,7 +60,7 @@ public class Reminder extends Button {
         });
     }
 
-    public void timerNotify() {
+    public void timerNotify(int displayTime) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this.context, "14");
         builder.setSmallIcon(R.drawable.ic_flex_stretch_notification_icon);
         builder.setContentTitle("Flex Stretch");
@@ -61,7 +70,11 @@ public class Reminder extends Button {
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this.context);
         notificationManager.notify(1, builder.build());
         started = false;
-        setText("Press ME");
+        if((getTime() / 1000) >= 60) {
+            setText(getTime() / 60000 + " minute timer");
+        } else {
+            setText(getTime() / 1000 + " seconds timer");
+        }
     }
 
     public int getTime() {

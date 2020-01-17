@@ -32,6 +32,8 @@ public class HomeFragment extends Fragment {
 
         reminderLayout.addView(new Reminder(this.getContext(), 2));
         reminderLayout.addView(new Reminder(this.getContext(), 5));
+        reminderLayout.addView(new Reminder(this.getContext(), 30));
+        reminderLayout.addView(new Reminder(this.getContext(), 60*5));
 
 
 
