@@ -2,5 +2,95 @@
     <string name="app_name">flex_break</string>
     <string name="title_home">Timers</string>
     <string name="title_dashboard">Stretches</string>
-    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore
+        eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.
+    </string>
+    <string name="accordion_head_eyes_text">
+            <b>How to Exercise Your Eyes</b>
+            \n\t - Strengthen your eyes’ near and far focusing.
+            \n\t - Practice zooming with your eyes.
+            \n\t - Make a figure eight with your eyes.
+            \n\t - Practice rhythmic eye movements.
+            \n\t - Do directional eye exercises.
+            \n\t - End your exercises with palming.
+    </string>
+    <string name="accordion_head_neck_text">
+            <b>Stiff Neck Exercises</b>
+            \n\t Consult your doctor if you have chronic pain
+            \n\t or suffered an injury.
+            \n\t\t - Turn your head slowly to the left and right.
+            \n\t\t - Do a set of side bend neck stretches.
+            \n\t\t - Do 5 to 10 diagonal neck stretches per side.
+            \n\t\t - Shrug and rotate your shoulders 10 times.
+            \n\t\t - Lift your head while lying on your back.
+            \n\t\t - Do 5 to 10 head lifts while lying on your side.
+    </string>
+    <string name="accordion_head_jaw_text">
+        <b>Exercises for Jaw Tension</b>
+        \n\t<b>TMJ Jaw Stretch.</b>
+        \n\t\t The TMJ jaw stretch can help loosen and relax tight
+        \n\t\t jaw muscles.
+        \n\t<b>Jaw Resistance Exercise.</b>
+        \n\t\t The jaw resistance exercise helps to gently stretch…
+        \n\t<b>Side-to-Side Jaw Stretch.</b>
+        \n\t\t This exercise stretches the sides of your
+        \n\t\t jaw and relaxes…
+        \n\t<b>The Smile Stretch.</b>
+        \n\t\t The smile stretch helps alleviate jaw tension…
+    </string>
+    <string name="accordion_torso_shoulders_text">
+            <b>Shoulder Stretches and Exercises</b>
+            \n\t<b>Exercise #1</b>
+            \n\t\t Stand perpendicular to the door with your feet about
+            \n\t\t shoulder-width apart. Hold the band in the hand of
+            \n\t\t the shoulder you wishto exercise and bend your elbow
+            \n\t\t 90 degrees. Keep your elbow tucked into the side of
+            \n\t\t your body with your hand over your navel, and then
+            \n\t\t slowly rotate your shoulder outwards.
+            \n\t<b>Exercise #2</b>
+            \n\t\t This is a simple strengthening move that can be done
+            \n\t\t pretty much anywhere.Stand up tall and straight.
+            \n\t\t Slowly flex your shoulder blades back and together.
+            \n\t\t Imagine suspending a pencil in between your shoulder
+            \n\t\t blades.
+    </string>
+   <string name="accordion_torso_lower_back_text">
+              <b>5 Stretches to Ease Your Lower Back Pain</b>
+              \n\t<b>Child’s Pose.</b>
+              \n\t\t This common yoga posture gently stretches the
+              \n\t\t muscles of the low back,…
+              \n\t<b>Cat/Cow Stretch.</b>
+              \n\t\t This dynamic movement moves the low back
+              \n\t\t musicles in two directions,…
+              \n\t<b>Lower-Back Twist.</b>
+              \n\t\t This movement not only helps to stretch your
+              \n\t\t lower back but also your glutes,…
+              \n\t<b>Knee-to-Chest Stretch.</b>
+              \n\t\t Similar…
+    </string>
+    <string name="accordion_torso_hips_text">
+        <b>Pigeon stretch.</b>
+        \n\t Place your right ankle in front of your left hip.
+        \n\t Straighten your left leg behind you, making sure
+        \n\t your left knee is straight and your toes are pointed.
+        \n\t Keep your hips square. Gently lower yourself to
+        \n\t the ground.
+        \n\t Stay in this position for up to 10 seconds.
+        \n\t Release the position by pushing on your hands,
+        \n\t lifting your hips,…
+    </string>
+    <string name="accordion_arms_wrists_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="accordion_arms_forearms_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="accordion_arms_fingers_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="accordion_legs_knees_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="accordion_legs_ankles_calves_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="accordion_legs_feet_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
 </resources>

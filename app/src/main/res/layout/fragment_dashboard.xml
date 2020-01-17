@@ -9,6 +9,7 @@ android:layout_height="match_parent"
 tools:context="com.riyagayasen.easyaccordion.AccordionView">
 
     <LinearLayout
+        android:id="@+id/accordion_linear_layout_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -17,6 +18,9 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
             android:textAlignment="center"
             android:textColor="?attr/actionMenuTextColor"
             android:textSize="0sp"
@@ -26,11 +30,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
             app:layout_constraintTop_toTopOf="parent" />
 
         <ScrollView
+            android:id="@+id/accordion_scrollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false">
 
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/accordion_linear_compat_nested"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:overScrollMode="always"
@@ -43,7 +49,7 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                     android:layout_height="wrap_content"
                     android:visibility="visible"
                     app:heading="Head"
-                    app:isAnimated="false"
+                    app:isAnimated="true"
                     app:isExpanded="false"
                     app:isPartitioned="true">
 
@@ -62,13 +68,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Eyes"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_head_eyes_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_head_eyes_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
 
@@ -81,13 +87,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Neck"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_head_neck_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_head_neck_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
 
@@ -100,13 +106,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Jaw"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_head_jaw_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_head_jaw_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -138,13 +144,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Shoulders"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_torso_shoulders_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_torso_shoulders_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
 
@@ -157,13 +163,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Lower-Back"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_torso_lower_back_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_torso_lower_back_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
 
@@ -176,13 +182,14 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Hips"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            android:outlineSpotShadowColor="@color/cardview_light_background"
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_torso_hips_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_torso_hips_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -214,13 +221,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Wrists"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_arms_wrists_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_arms_wrists_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
 
@@ -233,13 +240,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Forearms"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_arms_forearms_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_arms_forearms_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
 
@@ -252,13 +259,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Fingers"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_arms_fingers_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_arms_fingers_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -290,13 +297,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Knees"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_legs_knees_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_legs_knees_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
 
@@ -309,13 +316,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Ankles-Calves"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_legs_ankles_calves_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_legs_ankles_calves_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
 
@@ -328,13 +335,13 @@ tools:context="com.riyagayasen.easyaccordion.AccordionView">
                             app:heading="Feet"
                             app:isAnimated="false"
                             app:isExpanded="false"
-                            app:isPartitioned="false">
+                            app:isPartitioned="true">
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/accordion_legs_feet_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/lorem_ipsum" />
+                                android:text="@string/accordion_legs_feet_text" />
 
                         </com.riyagayasen.easyaccordion.AccordionView>
                     </androidx.appcompat.widget.LinearLayoutCompat>
